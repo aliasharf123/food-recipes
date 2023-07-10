@@ -14,14 +14,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout(props : {
   children: React.ReactNode ,
-  authModel: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className}`}>
         <Header/>
         {props.children} 
-        {props.authModel}
         <Footer/>
       </body>
     </html>

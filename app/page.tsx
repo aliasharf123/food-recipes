@@ -1,13 +1,16 @@
 import Image from 'next/image'
-import Link from 'next/link'
-
+import logo from '@/public/Screenshot 2023-07-10 133502_auto_x2.jpg'
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Main page
-      <button>
-        <Link href="login">hi</Link>
-      </button>
+    <main className="marginContent mt-6 ">
+      <div className='bg-Theme rounded-3xl px-7 grid lg:grid-cols-2  '>
+          <div className='flex flex-col gap-4  my-auto ml-5 max-lg:text-center lg:ml-10'>
+            <h1 className='xl:text-6xl text-4xl font-medium'>Meal <br />Recipes</h1>
+            <h1>Meal Recipes are like our big,<br /> constantly-in-progress dinner <br /> party-and you&lsquo;re invited</h1>
+            <h1 className='font-medium'>How they work --</h1>
+          </div>
+          <Image src={logo} width={1300} height={1300} priority alt='chef' className='m-auto'/>
+      </div>
     </main>
   )
 }

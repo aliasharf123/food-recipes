@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+    .btn-main {
+      @apply shadow-md duration-200  hover:bg-hovering bg-black font-medium text-white p-2 px-4 rounded-full;
+    }
+    .marginContent{
+      @apply  lg:mx-20 md:mx-10 mx-5
+    }
+    .btn-secondary{
+      @apply hover:bg-blur duration-300 rounded-full p-2 px-4
+    }
+  }
