@@ -5,6 +5,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Detail = ['Country' , 'Category']
+
+export async function generateMetadata({
+  params: { Meal_recipe },
+}: {
+  params: { Meal_recipe: string }
+}) {
+  const MealResponce : MealsResponse =  await getSingleMeal(Meal_recipe)
+  const Meal : Meal = MealResponce.meals[0]
+  return {
+    title: Meal.strMeal,
+  }
+}
+
+
 export default async function SingleMeal({
     params: { Meal_recipe },
   }: {
