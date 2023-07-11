@@ -21,7 +21,7 @@ export default async function SingleMeal({
 
         </div>
         <div className="grid md:grid-cols-2 gap-20">
-          <Image src={"https://www.themealdb.com/images/media/meals/k29viq1585565980.jpg"} className="w-full " width={500} height={300} alt="manin" priority/>
+          <Image src={Meal.strMealThumb} className="w-full " width={500} height={300} alt="manin" priority/>
           <div className="flex flex-col gap-4">
             <h1 className="text-3xl font-semibold text-ellipsis">{Meal.strMeal}</h1>
             <div className="grid grid-cols-2 ">
