@@ -18,7 +18,7 @@ const abril_Fatface = Abril_Fatface({
 export default function Header() {
     const pathname = usePathname()
     return (
-         <nav className="pt-5 grid grid-cols-2 marginContent">
+         <nav className="pt-5 grid grid-cols-2 marginContent mb-6">
             <div className="flex justify-between gap-8">
                 <Link href={`/`} className={`${abril_Fatface.className} text-xl lg:text-2xl my-auto`}>FoodWekaa</Link>
                 <ul className="flex gap-10 mt-1 max-lg:hidden">

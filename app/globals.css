@@ -5,12 +5,15 @@
 
 @layer components {
     .btn-main {
-      @apply shadow-md duration-200  hover:bg-hovering bg-black font-medium text-white p-2 px-4 rounded-full;
+      @apply shadow-md duration-200  hover:bg-hovering bg-black font-medium text-white max-md:tracking-tight p-2  md:px-4 rounded-full;
     }
     .marginContent{
       @apply  lg:mx-20 md:mx-10 mx-5
     }
     .btn-secondary{
       @apply hover:bg-blur duration-300 rounded-full p-2 px-4
+    }
+    .text-filtrs {
+      @apply text-lg max-xl:text-base font-semibold 
     }
   }
