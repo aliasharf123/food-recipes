@@ -14,12 +14,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout(props : {
   children: React.ReactNode ,
+  model: React.ReactNode
 }) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
         <Header/>
         {props.children} 
+        {props.model} 
         <Footer/>
       </body>
     </html>

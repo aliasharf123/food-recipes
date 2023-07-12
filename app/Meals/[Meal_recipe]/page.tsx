@@ -30,9 +30,7 @@ export default async function SingleMeal({
       <div className="marginContent">
         <div className="flex gap-4 font-medium mb-5">
           <Link href={'/'}>Home  </Link> &gt; 
-          <Link href={'/Meals'}>Meals  </Link>&gt;
           <Link href={`/Meals/${Meal.idMeal}`}>{Meal.strMeal}</Link>
-
         </div>
         <div className="grid md:grid-cols-2 gap-20">
           <Image src={Meal.strMealThumb} className="w-full " width={500} height={300} alt="manin" priority/>
