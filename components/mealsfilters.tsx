@@ -2,6 +2,9 @@
 
 import { mealsData } from "@/utils/mealsFilters";
 import AddIcon from '@mui/icons-material/Add';
+
+
+
 export default function MealsFilters() {
     return ( 
     <div className="max-lg:flex flex-col max-lg:items-center ">

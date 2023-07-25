@@ -3,6 +3,9 @@ import getSingleMeal from "@/lib/getSingleMeal";
 import { Meal, MealsResponse } from "@/mealstype";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const Ingredient = dynamic(() => import('@/components/ingredient'))
 
 const Detail = ['Country' , 'Category']
 
@@ -26,6 +29,8 @@ export default async function SingleMeal({
   }) {
     const MealResponce : MealsResponse =  await getSingleMeal(Meal_recipe)
     const Meal : Meal = MealResponce.meals[0]
+
+
     return ( 
       <div className="marginContent">
         <div className="flex gap-4 font-medium mb-5">
@@ -49,7 +54,9 @@ export default async function SingleMeal({
             </div>
             <h1 className="text-lg font-medium">Ingredients</h1>
             <div className="flex-wrap flex gap-4">
-              {extractIngredients(Meal).map((value , index)=> <div key={index}>{value.ingredient}</div>)}
+              {extractIngredients(Meal).map((value , index)=> 
+             <Ingredient key={index} value={value}/>
+             )}
             </div>
           </div>
         </div>

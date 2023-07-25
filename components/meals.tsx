@@ -9,6 +9,8 @@ const Filters = dynamic(() => import('./filters'))
 
 export default async function Meals() {
     const meals : MealsResponse = await getMeals()
+
+    
     return ( 
         <div className=' col-span-3 max-md:text-sm '>
             <Filters/>

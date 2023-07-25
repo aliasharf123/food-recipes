@@ -1,6 +1,10 @@
 import Image from 'next/image'
 import logo from '@/public/Screenshot 2023-07-10 133502_auto_x2.jpg'
 import Meals from '@/components/MealsSearch'
+import { useRouter } from 'next/navigation'
+
+
+
 export default function Home() {
   return (
     <main className="marginContent  flex flex-col gap-10">
