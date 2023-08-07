@@ -22,7 +22,8 @@ module.exports = {
         'blur': '#e0e0e0',
         'ring-blue':'rgba(59,130,246,.5)',
         'error':'#cc392f',
-        'greenmoney':'#07bc0c'
+        'greenmoney':'#07bc0c',
+        'selectedGategory': '#FD736E'
       }
     },
   },

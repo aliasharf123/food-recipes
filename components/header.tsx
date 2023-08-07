@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import DrawerContent from "./drawer";
-import { Links } from "@/utils/data";
+import { Links } from "@/utils/navbarData";
 import {Abril_Fatface} from 'next/font/google'
 
 const abril_Fatface = Abril_Fatface({

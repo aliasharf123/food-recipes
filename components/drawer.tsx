@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Button, Drawer, Radio, Space } from 'antd';
 import { usePathname } from 'next/navigation'
 import DehazeOutlinedIcon from '@mui/icons-material/DehazeOutlined';
-import { Links } from '@/utils/data';
+import { Links } from '@/utils/navbarData';
 import Link from 'next/link';
 
 export default function DrawerContent() {

@@ -1,11 +1,14 @@
 import Image from 'next/image'
 import logo from '@/public/Screenshot 2023-07-10 133502_auto_x2.jpg'
-import Meals from '@/components/MealsSearch'
-import { useRouter } from 'next/navigation'
+import Meals from '../components/mealsSection'
 
+export interface props {
+  searchParams: {
+    category: string
+  } | undefined
+}
 
-
-export default function Home() {
+export default function Home({searchParams}:props) {
   return (
     <main className="marginContent  flex flex-col gap-10">
       <div className='bg-Theme rounded-3xl px-7 grid lg:grid-cols-2  '>
@@ -16,7 +19,7 @@ export default function Home() {
           </div>
           <Image src={logo} width={1300} height={1300} priority alt='chef' className='m-auto'/>
       </div>
-      <Meals/>
+      <Meals  searchParams={searchParams}/>
     </main>
   )
 }
