@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
-import Meals from "./meals/mealsSection.tsx";
 import { props } from "@/app/page";
+import Meals from "./meals/mealsSection";
 
 const Mealsfilters = dynamic(() => import('./filtersGategory/filters'))
 
