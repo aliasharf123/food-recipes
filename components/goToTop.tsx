@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useState } from "react";
-
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { AnimatePresence, motion } from "framer-motion";
 export default function UpToTop() {
 
     const [isVisible, setIsVisible] = useState(false);
@@ -30,9 +31,13 @@ export default function UpToTop() {
       }, []);
 
     return ( 
-        <div onClick={scrollToTop} className={`fixed bottom-5 right-5 ${isVisible ? 'visible' : 'invisible'}`}>
-            sss
-        </div>
+      <div className="fixed bottom-5  right-5">
+        <AnimatePresence>
+          {isVisible &&<motion.button whileHover={{scale: 1.05}} initial={{opacity:0 , y: 100}} transition={{duration: 0.1}} animate={{opacity:1 , y: 0}} exit={{opacity:0, y: 100}} onClick={scrollToTop} className={`  bg-black text-white rounded-full p-1 shadow-lg`}>
+              <ArrowUpwardIcon/>
+          </motion.button>}
+        </AnimatePresence>
+      </div>
      );
 }
 
