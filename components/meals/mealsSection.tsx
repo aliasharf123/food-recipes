@@ -13,7 +13,7 @@ export default async function Meals({searchParams}:props) {
     return ( 
         <div className=' col-span-3 max-md:text-sm  '>
             <Filters/>
-            <MealsView meals={meals}/>
+            <MealsView noOfCloumns={3} meals={meals}/>
         </div> 
      );
 }

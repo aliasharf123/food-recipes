@@ -20,9 +20,11 @@ export default function Header() {
             <div className="flex justify-between gap-8">
                 <Link href={`/`} className={`${abril_Fatface.className} text-xl lg:text-2xl my-auto `}>FoodWekaa</Link>
                 <ul className="flex gap-10 mt-1 max-lg:hidden">
-                    {(Links.slice(0 ,Links.length -1 )).map((value , index)=>(
+                    {(Links.slice(0 ,Links.length -2 )).map((value , index)=>(
                         <h1 className={`${!pathname.includes(value) &&"text-primaary"}  font-medium hover:text-black`} key={index}>{value}</h1>
                     ))}
+                    <Link href={`/search`} className={`${!pathname.includes('search') &&"text-primaary"}  font-medium hover:text-black`}>Recipes</Link>
+
                     <Link href={`/About`} className={`${!pathname.includes('About') &&"text-primaary"}  font-medium hover:text-black`}>About</Link>
                 </ul>
             </div>
