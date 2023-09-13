@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const Ingredient = dynamic(() => import('@/components/ingredient'))
+const Ingredient = dynamic(() => import('../[Meal_recipe]/components/ingredient'))
 
 const Detail = ['Country' , 'Category']
 
@@ -33,13 +33,13 @@ export default async function SingleMeal({
 
     return ( 
       <div className="marginContent">
-        <div className="flex gap-4 font-medium mb-5">
+        <div className="flex gap-4 font-medium mb-5 ">
           <Link href={'/'}>Home  </Link> &gt; 
           <Link href={'/search'}>Resipes  </Link> &gt; 
-          <Link href={`/Meals/${Meal.idMeal}`}>{Meal.strMeal}</Link>
+          <Link href={`/Meals/${Meal.idMeal}`} >
+            <h1>{Meal.strMeal}</h1></Link>
         </div>
-        <div className="grid md:grid-cols-2 gap-20">
-          <Image src={Meal.strMealThumb} className="w-full " width={500} height={300} alt="manin" priority/>
+        <div className="md:grid md:grid-cols-2 max-md:flex max-md:flex-col gap-20">
           <div className="flex flex-col gap-4">
             <h1 className="text-3xl font-semibold text-ellipsis">{Meal.strMeal}</h1>
             <div className="grid grid-cols-2 ">
@@ -53,12 +53,16 @@ export default async function SingleMeal({
                 )
               })}
             </div>
-            <h1 className="text-lg font-medium">Ingredients</h1>
-            <div className="flex-wrap flex gap-4">
+            <h1 className="text-lg font-medium  ">Ingredients</h1>
+
+            <div className="grid grid-cols-3  gap-4">
               {extractIngredients(Meal).map((value , index)=> 
              <Ingredient key={index} value={value}/>
              )}
             </div>
+          </div>
+          <div className=" md:p-3 	max-md:order-first h-fit">
+              <Image src={Meal.strMealThumb} className="w-full rounded-xl shadow-lg " width={500} height={400} alt="manin" priority/>
           </div>
         </div>
       </div>
