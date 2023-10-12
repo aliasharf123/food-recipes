@@ -1,14 +1,6 @@
-'use client'
-
 import Link from "next/link";
 import {Abril_Fatface} from 'next/font/google'
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import FacebookIcon from '@mui/icons-material/Facebook';
-
-import InstagramIcon from '@mui/icons-material/Instagram';
-
-const social = [TwitterIcon,LinkedInIcon,FacebookIcon,InstagramIcon]
+import SocialIconsClient from "./SocialIconsClient";
 
 const products = [
     {
@@ -37,11 +29,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 gap-14">
             <div className="flex flex-col gap-2">
                 <Link href={`/`} className={`${abril_Fatface.className} text-xl lg:text-2xl `}>FoodWekaa</Link>
-                <div className="flex gap-2">
-                    {social.map((Value , index)=>(
-                        <Value className="btn-secondary px-2 text-4xl border" key={index}/>
-                    ))}
-                </div>
+                <SocialIconsClient/>
             </div>
             <div className="grid md:grid-cols-3 my-auto font-medium grid-cols-2 gap-2">
                 {products.map((value , index)=>(

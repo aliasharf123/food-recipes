@@ -1,3 +1,4 @@
+'use client'
 import { categoryToEmoji } from '@/utils/categoryHandler';
 import { categoryList } from '@/utils/categoryList';
 import Link from 'next/link';

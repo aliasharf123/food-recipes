@@ -1,10 +1,7 @@
 'use client'
-
-import { categoryToEmoji } from '@/utils/categoryHandler';
 import { categoryList } from '@/utils/categoryList';
 import { ScrollArea } from '@mantine/core';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import Link from 'next/link';
 import {useRef, useState} from 'react'
 import { useSearchParams } from 'next/navigation'
 import SingleCategory from './singleCategory';
