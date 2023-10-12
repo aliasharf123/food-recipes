@@ -54,22 +54,3 @@ Our website boasts a vast collection of recipes. Here's a glimpse of the categor
 
 Our collection is continually growing, so you'll always find something new to try.
 
-## Contributing
-
-We believe in the power of community. If you're a passionate chef or an enthusiastic home cook, consider contributing your own recipes to our website. Sharing your culinary creations with the world is easy and rewarding. To contribute:
-
-1. Log in to your account.
-
-2. Navigate to the "Contribute" section.
-
-3. Fill out the recipe details, including ingredients, instructions, and any additional notes.
-
-4. Submit your recipe for review, and it may be featured on our website for others to enjoy.
-
-## License
-
-The Food Recipes Website is released under the [MIT License](LICENSE). You are free to use, modify, and distribute this code for your own purposes. However, please respect any external resources and third-party libraries used in this project, as they may have their own licensing terms.
-
-Happy cooking, and bon appétit!
-
-For any questions, feedback, or support, please contact us at [contact@foodrecipeswebsite.com](mailto:contact@foodrecipeswebsite.com). We're excited to have you as part of our culinary community.
