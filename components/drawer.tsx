@@ -36,10 +36,10 @@ export default function DrawerContent() {
         {Links.map((value, index) => (
           <p key={index}>
             <Link
-              href={`/${value.link}`}
+              href={`${value.link}`}
               onClick={onClose}
               className={`${
-                !pathname.includes(value.link) && "text-primaary"
+                !pathname.endsWith(value.link) && "text-primaary"
               } text-lg font-medium`}
             >
               {value.name}

@@ -26,9 +26,10 @@ export default function Header() {
         <ul className="flex gap-10 mt-1 max-lg:hidden">
           {Links.map((link) => (
             <Link
-              href={`/${link.link}`}
+              href={`${link.link}`}
+              key={link.name}
               className={`${
-                !pathname.includes(link.link) && "text-primaary"
+                !pathname.endsWith(link.link) && "text-primaary"
               }  font-medium hover:text-black `}
             >
               {link.name}
